@@ -1,0 +1,168 @@
+.about
+  padding-top: 130px
+  overflow: hidden
+  @media (max-width: $breakpoint-sm)
+    padding-top: 63px
+
+  &__title
+    position: absolute
+    font-size: 54px
+    line-height: 30px
+    font-weight: 800
+
+    @media (max-width: $breakpoint-sm)
+      position: relative
+      margin-bottom: 61px
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 50px
+      height: 7px
+      background: #e2af5f
+      left: 0
+      bottom: -27px
+
+  &__wrapper
+    display: flex
+    flex-direction: row-reverse
+    align-items: flex-end
+    max-width: 1040px
+    width: 100%
+
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+      align-items: center
+
+  &__content
+    visibility: hidden
+    max-width: 570px
+    font-size: 17px
+    line-height: 27px
+    color: #505050
+    padding-bottom: 79px
+    margin-left: auto
+    @media (max-width: $breakpoint-sm)
+      width: 100%
+      max-width: 100%
+      padding-bottom: 65px
+
+    p
+      margin-bottom: 39px
+      @media (max-width: $breakpoint-sm)
+        margin-bottom: 22px
+
+      &:last-child
+        margin-bottom: 0
+
+    b
+      font-size: 27px
+      line-height: 30px
+      color: #2e2e2e
+      font-weight: 600
+
+  &__subtext
+    font-size: 15px
+    line-height: 22px
+    color: #e8a63d
+    font-weight: 800
+    display: none
+    cursor: pointer
+    position: absolute
+    anim()
+    @media (max-width: $breakpoint-sm)
+      display: block
+
+    &:after
+      content: ''
+      display: inline-block
+      background: url(images/sprite-arrow-down.svg);
+      margin-left: 16px
+
+    &--hidden
+      opacity: 0
+      pointer-events: none
+
+  &__sub
+    anim()
+    @media (max-width: $breakpoint-sm)
+      max-height:0
+      overflow: hidden
+
+  &__slider
+    visibility: hidden
+    position: relative
+    width: 320px
+    min-width: 320px
+    height: 320px
+    margin-right: 40px
+    @media (max-width: $breakpoint-sm)
+      max-width: 100%
+      min-width: auto
+      margin-right: 0
+
+    &:before, &:after
+      content: ''
+      display: block
+      width: 300px
+      height: 320px
+      position: absolute
+      top: 0
+
+    &:before
+      background: #d3d4e0
+      left: -130px
+      border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%
+      @media (max-width: $breakpoint-sm)
+        left: -150px
+
+    &:after
+      background: #222764
+      border-radius: 0% 100% 100% 0% / 30% 100% 0% 70%
+
+  &__slide
+    position: absolute
+    z-index: 1
+    color: #ffffff
+    padding-top: 141px
+    padding-left: 35px
+    opacity: 0
+    pointer-events: none
+    anim()
+
+    &--active
+      opacity: 1
+      pointer-events: all
+
+  &__number
+    font-family: 'Acrom', sans-serif
+    font-size: 73px
+    line-height: 30px
+    font-weight: bold
+    margin-bottom: 43px
+
+  &__text
+    font-size: 16px
+    line-height: 21px
+    font-weight: 800
+
+
+  &__prev, &__next
+    position: absolute
+    top: 0
+    background: url(images/sprite-arrow.svg)
+    opacity: .7
+    anim()
+    z-index: 2
+    cursor: pointer
+
+    &:hover
+      opacity: 1
+
+  &__prev
+    right: 61px
+    transform: rotate(180deg)
+
+  &__next
+    right: 0

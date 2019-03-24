@@ -1,0 +1,130 @@
+.steps
+
+  &__title
+    font-size: 54px
+    line-height: 30px
+    text-align: center
+    font-weight: 800
+    margin-bottom: 119px
+    @media (max-width: $breakpoint-sm)
+      line-height: 48px
+      text-align: left
+      padding: 0 20px
+      margin-bottom: 78px
+
+    &:after
+      content:''
+      display: block
+      position: absolute
+      background: #dbb06c
+      width: 50px
+      height: 7px
+      left: 50%
+      margin-left: -25px
+      margin-top: 29px
+      @media (max-width: $breakpoint-sm)
+        left: 20px
+        margin-left: 0
+        margin-top: 20px
+
+
+  &__slider
+    max-width 750px
+    width: 100%
+    margin: 0 auto
+
+  &__slide
+    padding-left: 337px
+    position: relative
+    @media (max-width: $breakpoint-sm)
+      padding-left: 0
+
+  &__header
+    font-size: 19px
+    line-height: 25px
+    color: #484848
+    margin-bottom: 11px
+    font-weight: 800
+    @media (max-width: $breakpoint-sm)
+      text-align: center
+
+  &__text
+    font-size: 17px
+    line-height: 25px
+    color: #484848
+    @media (max-width: $breakpoint-sm)
+      text-align: center
+      padding: 0 20px
+
+  &__image
+    position: absolute
+    width: 280px
+    height: 150px
+    background-size: cover
+    background-position: 50% 50%
+    left: 0
+    @media (max-width: $breakpoint-sm)
+      background-image: none !important;
+      display: none
+
+  &__arrows
+    margin-top: 36px
+    margin-left: 336px
+    display: flex
+    @media (max-width: $breakpoint-sm)
+      margin: 150px 0 0
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+
+  &__prev, &__next
+    background: url(images/sprite-arrow.svg)
+    opacity: .7
+    cursor: pointer
+    anim()
+
+    &:hover
+      opacity: 1
+
+  &__prev
+    transform: rotate(180deg)
+
+  &__next
+    margin-left: 14px
+
+  &__timeline-wrapper
+    overflow: auto
+    border-bottom: 1px solid #DCDCDC
+    padding-bottom: 3px
+    margin-bottom: 150px
+    //@media (max-width: $breakpoint-sm)
+    //  margin-bottom: 150px
+
+  &__timeline
+    position: relative
+    max-width: 960px
+    margin: 0 auto
+
+  &__items
+    margin-top: 59px
+    white-space: nowrap
+    text-align: center
+
+  &__item
+    display: inline-block
+    padding: 0 11px 11px
+    font-size: 17px
+    line-height: 25px
+    font-weight: 800
+    color: #484848
+    anim()
+    cursor: pointer
+
+    &--active
+      color: #e2af5f
+
+  &__pointer
+    position: absolute
+    height: 3px
+    background: #e2af5f
+    anim()

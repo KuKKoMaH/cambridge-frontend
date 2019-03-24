@@ -1,0 +1,38 @@
+.collapse
+  border-bottom: 1px solid #d0d0d0
+  margin-bottom: 33px
+
+  &__button
+    display: block
+    margin: 0 auto
+    border-radius: 33px
+    border: 1px solid #d0d0d0
+    height: 66px
+    margin-bottom: -33px
+    background: #ffffff
+    width: 250px
+    position: relative
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      background: #ffffff
+      height: 32px
+      left: -1px
+      right: -1px
+      bottom: -1px
+
+  &__text
+    font-size: 15px
+    line-height: 22px
+    color: #e8a63d
+    font-weight: 800
+    position: relative
+    z-index: 1
+
+    &:after
+      content: ''
+      display: inline-block
+      background: url(images/sprite-arrow-top.svg)
+      margin-left: 8px

@@ -1,0 +1,84 @@
+.excursionForm
+  max-width: $container-lg - 20px
+  margin: 0 auto
+  background: url(bg.png) 33px
+  padding: 5px
+  color: #ffffff
+
+  &__inner
+    background: #222764
+    padding: 44px 62px 44px 40px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @media (max-width: $breakpoint-lg)
+      flex-direction: column
+    @media (max-width: $breakpoint-sm)
+      padding: 32px 10px 30px
+
+  &__title
+    visibility: hidden
+    display: none
+    font-size: 32px
+    line-height: 30px
+    font-weight: 800
+    margin-bottom: 7px
+    @media (max-width: $breakpoint-lg)
+      display: block
+
+  &__text
+    visibility: hidden
+    font-size: 24px
+    line-height: 30px
+    margin-right: 74px
+
+    @media (max-width: $breakpoint-lg)
+      text-align: center
+      margin-right: 0
+      margin-bottom: 29px
+      br
+        display: none
+
+    span
+      font-weight: 800
+      @media (max-width: $breakpoint-lg)
+        display: none
+
+  &__form
+    visibility: hidden
+    display: flex
+    align-items: center
+    flex:1
+    @media (max-width: $breakpoint-md)
+      flex-direction: column
+      max-width: 370px
+      width: 100%
+
+  &__input
+    margin-right: 20px
+    border: 1px solid #E2AF5F
+    border-radius: 2px
+    font-size: 15px
+    line-height: 30px
+    padding: 10px 17px 8px
+    flex: 1
+
+    &::-webkit-input-placeholder {color:#fff;}
+    &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+    &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+    &:-ms-input-placeholder      {color:#fff;}
+
+    @media (max-width: $breakpoint-md)
+      width: 100%
+      margin-right: 0
+      margin-bottom: 9px
+
+
+  &__submit
+    background: #dbb06b
+    border-radius: 2px
+    padding: 20px 22px 15px
+    font-size: 15px
+    line-height: 1
+    @media (max-width: $breakpoint-md)
+      width: 100%

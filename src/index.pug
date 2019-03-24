@@ -1,0 +1,34 @@
+extends pug/_layout
+
+block body
+  include modules/menu/menu
+  include modules/head/head
+  include modules/excursion/excursion
+  include modules/excursionForm/excursionForm
+  include modules/about/about
+  include modules/sliders/sliders
+  include modules/progress/progress
+  include modules/programs/programs
+  .programs__program(data-program='1')
+    include modules/features/features
+    include modules/steps/steps
+    include modules/info/info
+    include modules/bullets/bullets
+    include modules/collapse/collapse
+  include modules/stats/stats
+  include modules/video/video
+  include modules/afterschool/afterschool
+  include modules/advantages/advantages
+  include modules/prices/prices
+  include modules/testimonials/testimonials
+  include modules/form/form
+  include modules/contacts/contacts
+
+  include modules/photoswipe/photoswipe
+
+
+  //div.hidden
+  //  include img/inline-sprite.svg
+  //  include modules/popup/popup-callback
+  //  include modules/popup/popup-request
+  //  include modules/popup/popup-part

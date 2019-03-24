@@ -1,0 +1,33 @@
+.stats#stats
+  .stats__title Статистика школы за 2016-2017 года
+  .stats__slider
+    .stats__items
+      .stats__item
+        .stats__chart(data-to='80')
+          svg.stats__round
+            circle(r="86" cx="86" cy="86" class="pie")
+          .stats__number 0%
+        .stats__text Участники олимпиад среди всех обучающихся в Кембриджской школе
+      .stats__item
+        .stats__chart(data-to='63')
+          svg.stats__round
+            circle(r="86" cx="86" cy="86" class="pie")
+          .stats__number 0%
+        .stats__text Выпускников, получивших 220 и более баллов ЕГЭ в сумме за 3 общеобразовательных
+      .stats__item
+        .stats__chart(data-to='61')
+          svg.stats__round
+            circle(r="86" cx="86" cy="86" class="pie")
+          .stats__number 0%
+        .stats__text Удельный вес медалистов среди учеников всей школы
+      .stats__item
+        .stats__icon
+        .stats__subicon 15
+        .stats__text Призеров олимпиад по разным предметам
+
+    .stats__nav
+      .stats__dot
+      .stats__dot
+      .stats__dot
+      .stats__dot
+

@@ -1,0 +1,166 @@
+.testimonials
+  padding: 96px 0 114px
+  overflow: hidden
+  @media (max-width: $breakpoint-sm)
+    padding: 55px 0 75px
+  &__title
+    font-size: 54px
+    line-height: 48px
+    text-align: center
+    font-weight: 800
+    margin-bottom: 41px
+    @media (max-width: $breakpoint-sm)
+      text-align: left
+      padding: 0 20px
+
+      &:after
+        content:''
+        display: block
+        position: absolute
+        background: #dbb06c
+        width: 50px
+        height: 7px
+        margin-top: 22px
+        left: 20px
+        margin-left: 0
+
+
+  &__tabs-headers
+    display: flex
+    justify-content: center
+    margin-bottom: 57px
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 46px
+
+  &__tabs-header
+    font-size: 16px
+    line-height: 27px
+    font-weight: 800
+    color: #6c6c6c
+    border-bottom: 3px solid transparent
+    margin: 0 16px
+    padding: 0 3px 8px
+    cursor: pointer
+    anim()
+
+    &--active
+      color: #2e2e2e
+      border-color: #E2AF5F
+
+  &__slider
+    flex: 1
+    @media (max-width: $breakpoint-sm)
+      visibility: hidden
+
+  &__items
+    display: flex
+
+  &__item
+    visibility: hidden
+    flex: 1
+    margin: 0 10px
+    @media (max-width: $breakpoint-sm)
+      visibility: visible
+      display: none
+      &:first-child
+        display: block
+
+  &__video
+    position: relative
+    width: 100%
+    cursor: pointer
+    display: block
+    &:before
+      content:''
+      display: block
+      padding-top: 56.25%
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      background: url(images/sprite-play.svg)
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      opacity: .7
+      transition: all .1s ease-out
+
+    &:hover
+      &:after
+        opacity: 1
+
+    img, iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      max-width: 100%
+      max-height: 100%
+
+    iframe
+      z-index: 1
+      background: #000000
+
+  &__name
+    font-size: 18px
+    line-height: 28px
+    font-weight: 800
+    margin-top: 27px
+    padding-left: 25px
+    @media (max-width: $breakpoint-md) and (min-width: $breakpoint-sm + 1)
+      padding-left: 0
+
+  &__note
+    font-size: 17px
+    line-height: 26px
+    margin-top: 9px
+    padding-left: 25px
+    @media (max-width: $breakpoint-md) and (min-width: $breakpoint-sm + 1)
+      padding-left: 0
+
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 35px 0 0
+    @media (min-width: $breakpoint-sm + 1)
+      display: none
+
+  &__dot
+    position: relative
+    width: 26px
+    height: 26px
+    background: transparent
+    margin: 0 8px
+    anim()
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      transform: translate(-50%, -50%)
+      top: 50%
+      left: 50%
+      border-radius: 50%
+      anim()
+
+    &:before
+      width: 10px
+      height: 10px
+
+    &:after
+      width: 12px
+      height: 12px
+      background: #d7d7d7
+
+    &.tns-nav-active
+      &:before
+        width: 26px
+        height: 26px
+        background: #dea751
+
+      &:after
+        width: 10px
+        height: 10px
+        background: #fff

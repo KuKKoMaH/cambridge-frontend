@@ -1,0 +1,124 @@
+.bullets
+  padding: 76px 0 72px
+  overflow: hidden
+  @media (max-width: $breakpoint-sm)
+    padding: 47px 0 58px
+
+  &__title
+    text-align: center
+    font-size: 56px
+    line-height: 53px
+    margin-bottom: 113px
+    font-weight: 800
+    @media (max-width: $breakpoint-sm)
+      font-size: 40px
+      line-height: 37px
+      text-align: left
+      padding: 0 20px
+      margin-bottom: 62px
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 50px
+      height: 7px
+      background: #dbb06b
+      margin-top: 29px
+      left: 50%
+      margin-left: -25px
+      @media (max-width: $breakpoint-sm)
+        left: 20px
+        margin-left: 0
+
+  &__items
+    display: flex
+    flex-wrap: wrap
+    max-width: 970px
+    justify-content: space-around
+    margin: 0 auto
+    @media (max-width: $breakpoint-sm)
+      display: block
+      max-width: none
+
+  &__item
+    width: 50%
+    max-width: 470px
+    position: relative
+    padding: 0 20px 0 96px
+    margin-bottom: 34px
+    @media (max-width: $breakpoint-sm)
+      max-width: none
+      width: 100%
+      padding: 0 0 0 53px
+      margin: 0
+
+  &__header
+    font-size: 19px
+    line-height: 25px
+    font-weight: 900
+    margin-bottom: 11px
+    color: #484848
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      margin-left: -94px
+      margin-top: -16px
+      background: url(images/sprite-bullet.svg)
+      @media (max-width: $breakpoint-sm)
+        transform: scale(.5)
+        margin-left: -63px
+        margin-top: -8px
+
+  &__text
+    font-size: 17px
+    line-height: 25px
+    color: #484848
+
+  &__nav
+    display: none
+    @media (max-width: $breakpoint-sm)
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 60px 0 0
+
+  &__dot
+    position: relative
+    width: 26px
+    height: 26px
+    background: transparent
+    margin: 0 8px
+    anim()
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      transform: translate(-50%, -50%)
+      top: 50%
+      left: 50%
+      border-radius: 50%
+      anim()
+
+    &:before
+      width: 10px
+      height: 10px
+
+    &:after
+      width: 12px
+      height: 12px
+      background: #d7d7d7
+
+    &.tns-nav-active
+      &:before
+        width: 26px
+        height: 26px
+        background: #dea751
+
+      &:after
+        width: 10px
+        height: 10px
+        background: #fff

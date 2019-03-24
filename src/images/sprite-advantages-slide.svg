@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="31px" viewBox="0 0 25 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 8 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cambridge_LP" transform="translate(-683.000000, -6720.000000)" fill="#E2AF5F">
+            <g id="Group-14" transform="translate(683.000000, 6720.000000)">
+                <g id="Group-5">
+                    <path d="M1,0 L24,0 C24.5522847,-1.01453063e-16 25,0.44771525 25,1 L25,29.9996466 C25,30.5519313 24.5522847,30.9996466 24,30.9996466 C23.7764467,30.9996466 23.5593402,30.9247385 23.3833505,30.7868844 L16.0486755,25.0415769 L1,25.0415769 C0.44771525,25.0415769 6.76353751e-17,24.5938616 0,24.0415769 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z" id="Rectangle-8-Copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

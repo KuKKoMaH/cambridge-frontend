@@ -1,0 +1,166 @@
+.menu
+  &__wrapper
+    width: 100%
+    height: 84px
+    background: #ffffff
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 100
+    @media (max-width: $breakpoint-sm)
+      display: none
+      height: 100%
+      padding-top: 124px
+      overflow: auto
+
+  &__content
+    display: flex
+    align-items: center
+    height: 100%
+    padding-right: 0
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+      padding-left: 0
+      height: auto
+
+  &__button
+    position: fixed
+    top: 25px
+    right: 20px
+    width: 58px
+    height: 58px
+    background: #222764
+    z-index: 101
+    @media (min-width: $breakpoint-sm + 1)
+      display: none
+
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      anim()
+
+    &:before
+      background: url(images/sprite-menu.svg)
+    &:after
+      opacity: 0
+      background: url(images/sprite-menu-close.svg)
+
+  &--active
+    .menu
+      &__button
+        &:before
+          opacity: 0
+        &:after
+          opacity: 1
+      &__wrapper
+        display: block
+
+  &__logo
+    @media (max-width: $breakpoint-sm)
+      display: none
+
+  &__items
+    margin: 0 20px
+    position: relative
+    flex: 1 1 auto
+    height: 100%
+    white-space: nowrap
+    @media (max-width: $breakpoint-sm)
+      margin: 0
+      height: auto
+
+    ul
+      height: 100%
+      display: flex
+      justify-content: space-between
+      @media (max-width: $breakpoint-sm)
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        height: auto
+
+    a
+      display: flex
+      align-items: center
+      height: 100%
+      font-size: 14px
+      font-weight: 800
+      padding: 0px 8px
+      border-top: 5px solid transparent
+      anim()
+      @media (max-width: $breakpoint-lg)
+        font-size: 12px
+      @media (max-width: $breakpoint-sm)
+        font-size: 24px
+        margin-bottom: 24px
+        border-top: 0
+        border-bottom: 5px solid transparent
+        padding-bottom: 4px
+
+      &:hover
+        color: #4a429d
+        border-color: #4a429d
+        @media (max-width: $breakpoint-sm)
+          color: #e2af5f
+          border-color: #e2af5f
+
+  &__menu--active
+    color: #4a429d
+
+  &__pointer
+    position: absolute
+
+  &__buttons
+    display: flex
+    height: 100%
+    @media (max-width: $breakpoint-md)
+      flex-direction: column
+    @media (max-width: $breakpoint-sm)
+      height: auto
+      width: 100%
+      padding: 0 20px
+
+  &__phone
+    background: #f0f0f0
+    font-size: 22px
+    font-weight: 800
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    flex-grow 1
+    white-space: nowrap
+    padding: 0 8px
+    @media (max-width: $breakpoint-lg)
+      font-size: 18px
+    @media (max-width: $breakpoint-sm)
+      position: absolute
+      top: 25px
+      left: 20px
+      height: 58px
+      right: 20px
+      padding: 0 58px 0 0
+
+  &__excursion
+    background: #222764
+    color: #ffffff
+    font-size: 17px
+    font-weight: 800
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    flex-grow 1
+    padding: 0 8px
+    @media (max-width: $breakpoint-lg)
+      font-size: 15px
+    @media (max-width: $breakpoint-sm)
+      padding: 19px 0
+      width: 100%

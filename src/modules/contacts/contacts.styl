@@ -1,0 +1,119 @@
+.contacts
+  display: block
+  overflow: hidden
+  padding: 98px 0 18px
+  @media (max-width: $breakpoint-sm)
+    padding: 40px 0 20px
+
+  &__cols
+    display: flex
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+      align-items: center
+
+    &--sub
+      border-top: 1px solid #D6D6D6
+      margin-top: 60px
+      padding-top: 18px
+      align-items: center
+      @media (max-width: $breakpoint-sm)
+        flex-direction: column-reverse
+
+  &__col
+    visibility: hidden
+    flex: 1
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 12px
+
+  &__col2
+    visibility: hidden
+    flex: 2
+    display: flex
+    align-items: center
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+
+  &__title
+    font-size: 30px
+    line-height: 48px
+    font-weight: 800
+    margin-bottom: 11px
+    color: #222568
+
+  &__text
+    b
+      display: inline-block
+      font-size: 14px
+      //line-height: 48px
+      font-weight: 800
+      color: #2e2e2e
+
+    p
+      font-size: 16px
+      line-height: 25px
+      color: #6c6c6c
+      margin-bottom: 9px
+
+  &__phones
+    font-size: 19px
+    line-height: 32px
+    font-weight: 800
+    margin-bottom: 17px
+
+  &__copyright
+    font-size: 14px
+    line-height: 21px
+    color: #6c6c6c
+
+  &__socials
+    font-size: 17px
+    line-height: 17px
+    font-weight: bold
+    display: flex
+    align-items: center
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 22px
+
+    p
+      margin-right: auto
+
+  &__social
+    display: block
+    margin-left: 18px
+    opacity: .8
+    flex-shrink: 0
+    anim()
+    &:hover
+      opacity: 1
+    &--fb
+      background: url(images/sprite-fb.svg);
+    &--vk
+      background: url(images/sprite-vk.svg);
+
+  &__primary
+    background: #222764
+    padding: 20px 33px
+    color: #ffffff
+    font-size: 15px
+    margin-left: auto
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 25px
+
+    &:hover
+      text-decoration: underline
+
+    b
+      font-size: 12px
+      margin-right: 23px
+
+  &__map
+    position: relative
+    height: 350px
+    width: 100%
+    @media (max-width: $breakpoint-sm)
+      display: none
+
+  #map
+    position: absolute
+    width: 100%
+    height: 100%

@@ -1,0 +1,192 @@
+.programs
+  background: #18215b url(./programs-bg.jpg) 50% 50%;
+  background-size: cover
+  padding: 111px 0 129px
+  overflow: hidden
+  @media (max-width: $breakpoint-sm - 1)
+    background-image: none
+    padding: 44px 0 61px
+
+  &__title
+    text-align: center
+    font-size: 54px
+    line-height: 30px
+    font-weight: 800
+    margin-bottom: 76px
+    color: #ffffff
+    @media (max-width: $breakpoint-sm - 1)
+      line-height: 61px
+      text-align: left
+      padding: 0 20px
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 50px
+      height: 7px
+      background: #E2AF5F
+      left: 50%
+      margin-left: -25px
+      margin-top: 29px
+      @media (max-width: $breakpoint-sm - 1)
+        left: 20px
+        margin-left: 0
+
+  &__subtitle
+    text-align: center
+    font-size: 19px
+    line-height: 25px
+    margin-bottom: 79px
+    color: #ffffff
+    @media (max-width: $breakpoint-sm - 1)
+      text-align: left
+      padding: 0 20px
+      margin-bottom: 49px
+      br
+        display: none
+
+  &__slider
+    @media (max-width: $breakpoint-sm)
+      visibility: hidden
+
+  &__slides
+    display: flex
+    justify-content: stretch
+    width: 100%
+    max-width: 1700px
+    margin: 0 auto
+    @media (max-width: $breakpoint-sm)
+      display: block
+      max-width: none
+
+  &__slide
+    visibility: hidden
+    @media (max-width: $breakpoint-sm)
+      visibility: visible
+      display: none
+      &:first-child
+        display: block
+
+  &__item
+    background: #ffffff
+    margin: 10px 7px 0
+    padding: 0 34px
+    min-height: 290px
+    display: flex
+    flex-direction: column
+    @media (min-width: $breakpoint-sm)
+      padding: 0 12px
+
+
+  &__image
+    width: 70px
+    height: 70px
+    min-height: 70px
+    margin-top: -10px
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    z-index: 1
+
+  &__header
+    font-size: 17px
+    line-height: 24px
+    font-weight: 800
+    margin-bottom: 14px
+
+    &:before
+      content: ''
+      display: block
+      height: 1px
+      background: #D1D1D1
+      margin-top: -1px
+      margin-bottom: 42px
+
+  &__text
+    font-size: 17px
+    line-height: 22px
+    color: #505050
+
+  &__link
+    margin-top: auto
+    font-size: 11px
+    color: #e2af5f
+    padding: 22px 0
+    cursor: pointer
+
+    &:before
+      content: ''
+      display: block
+      height: 1px
+      background: #D1D1D1
+      margin-bottom: 22px
+
+    &:after
+      content: ''
+      display: inline-block
+      margin-left: 13px
+      background: url(images/sprite-arrow-down-small.svg)
+
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 35px 0 0
+    @media (min-width: $breakpoint-sm + 1)
+      display: none
+
+
+  &__dot
+    position: relative
+    width: 26px
+    height: 26px
+    background: transparent
+    margin: 0 8px
+    anim()
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      transform: translate(-50%, -50%)
+      top: 50%
+      left: 50%
+      border-radius: 50%
+      anim()
+
+    &:before
+      width: 10px
+      height: 10px
+
+    &:after
+      width: 12px
+      height: 12px
+      background: #d7d7d7
+
+    &.tns-nav-active
+      &:before
+        width: 26px
+        height: 26px
+        background: #dea751
+
+      &:after
+        width: 10px
+        height: 10px
+        background: #fff
+
+  &__program
+    max-height: 0;
+    overflow: hidden
+
+    & > *
+      anim(.3s)
+      opacity: 0
+      transform: translateY(50px)
+
+    &--active
+      max-height: none
+      & > *
+        opacity: 1
+        transform: none

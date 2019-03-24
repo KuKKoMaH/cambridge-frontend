@@ -1,0 +1,218 @@
+.advantages
+  background: #f0f0f0
+  padding: 87px 0 84px
+  overflow: hidden
+  @media (max-width: $breakpoint-sm)
+    padding: 34px 0 43px
+
+  &__title
+    display: none
+    @media (max-width: $breakpoint-sm)
+      display: block
+      font-size: 54px
+      line-height: 61px
+      font-weight: 800
+      padding: 0 20px
+      margin-bottom: 92px
+      &:after
+        content: ''
+        display: block
+        width: 50px
+        height: 7px
+        background: #e2af5f
+        position: absolute
+        margin-top: 20px
+
+  &__content
+    display: flex
+    @media (max-width: $breakpoint-sm)
+      padding: 0
+
+  &__banner
+    visibility: hidden
+    background: #222764
+    color: #ffffff
+    font-weight: 800
+    padding: 30px 48px 24px
+    flex: 0
+    @media (max-width: $breakpoint-sm)
+      display: none
+
+  &__banner-number
+    font-size: 223px
+    line-height: 1
+    margin-bottom: -17px
+
+  &__banner-text
+    font-size: 31px
+    line-height: 39px
+    margin-bottom: 32px
+
+  &__banner-button
+    background: #e2af5f
+    display: block
+    padding: 10px 0
+
+  &__right
+    visibility: hidden
+    flex: 1
+    margin-left: 20px
+    min-width: 0
+    align-self: center
+    @media (max-width: $breakpoint-sm)
+      margin-left: 0
+
+  &__slider
+    position: relative
+    max-width 570px
+    margin: 0 auto
+    @media (max-width: $breakpoint-sm)
+      max-width: none
+
+  &__slide-big
+    .advantages__slide
+      margin-bottom: 69px
+      display: block
+      &:last-child
+        margin-bottom: 0
+
+  &__slide
+    padding-left: 181px
+    display: none
+    &:first-child
+      display: block
+    @media (max-width: $breakpoint-sm)
+      padding: 0 20px
+
+  &__icon
+    position: absolute
+    background: url(images/sprite-advantages-slide.svg)
+    color: #ffffff
+    font-size: 18px
+    font-weight: 800
+    text-align: center
+    padding-top: 4px
+    margin-left: -181px
+    @media (max-width: $breakpoint-sm)
+      position: relative
+      margin-left: 0
+      margin-bottom: 81px
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+
+    &:before
+      width: 91px
+      height: 91px
+      background: #ffffff
+      border-radius: 50%
+      z-index: -1
+      top: 0
+      left: 15px
+
+    &:after
+      top: 40px
+      left: 80px
+      transform: translate(-50%, -50%)
+
+    &--1:after
+      background: url(images/sprite-reason1.svg)
+    &--2:after
+      background: url(images/sprite-reason2.svg)
+    &--3:after
+      background: url(images/sprite-reason3.svg)
+    &--4:after
+      background: url(images/sprite-reason4.svg)
+    &--5:after
+      background: url(images/sprite-reason5.svg)
+    &--6:after
+      background: url(images/sprite-reason6.svg)
+    &--7:after
+      background: url(images/sprite-reason7.svg)
+    &--8:after
+      background: url(images/sprite-reason8.svg)
+    &--9:after
+      background: url(images/sprite-reason9.svg)
+
+  &__header
+    font-size: 24px
+    line-height: 28px
+    font-weight: bold
+    margin-bottom: 10px
+
+  &__text
+    font-size: 17px
+    line-height: 26px
+
+
+  &__prev, &__next
+    position: absolute
+    background: url(images/sprite-arrow.svg)
+    opacity: .7
+    anim()
+    z-index: 2
+    top: 50%
+    right: -50px
+    cursor: pointer
+    outline: 0
+    @media (max-width: $breakpoint-sm)
+      display: none
+
+    &:hover
+      opacity: 1
+
+  &__prev
+    margin-top: -30px
+    transform: rotate(180deg)
+
+  &__next
+    margin-top: 30px
+
+  &__nav
+    display: none
+
+    align-items: center
+    justify-content: center
+    margin: 35px 0 55px
+    @media (max-width: $breakpoint-sm)
+      display: flex
+
+  &__dot
+    position: relative
+    width: 26px
+    height: 26px
+    background: transparent
+    margin: 0 8px
+    anim()
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      transform: translate(-50%, -50%)
+      top: 50%
+      left: 50%
+      border-radius: 50%
+      anim()
+
+    &:before
+      width: 10px
+      height: 10px
+
+    &:after
+      width: 12px
+      height: 12px
+      background: #d7d7d7
+
+    &.tns-nav-active
+      &:before
+        width: 26px
+        height: 26px
+        background: #dea751
+
+      &:after
+        width: 10px
+        height: 10px
+        background: #fff

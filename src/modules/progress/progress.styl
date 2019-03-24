@@ -1,0 +1,215 @@
+.progress
+  padding: 116px 0 80px
+  @media (max-width: $breakpoint-sm)
+    padding: 47px 0
+  &__title
+    text-align: center
+    font-size: 54px
+    line-height: 30px
+    font-weight: 800
+    margin-bottom: 76px
+
+    @media (max-width: $breakpoint-sm)
+      line-height: 61px
+      text-align: left
+      padding: 0 20px
+      margin-bottom: 51px
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 50px
+      height: 7px
+      background: #dbb06b
+      left: 50%
+      margin-left: -25px
+      margin-top: 29px
+      @media (max-width: $breakpoint-sm)
+        left: 20px
+        margin-left: 0
+        margin-top: 19px
+
+  &__subtitle
+    text-align: center
+    font-size: 19px
+    line-height: 25px
+    color: #505050
+    margin-bottom: 59px
+    @media (max-width: $breakpoint-sm)
+      text-align: left
+      padding: 0 20px
+
+      br
+        display: none
+
+  &__slider
+    visibility: hidden
+    max-width: 1130px
+    width: 100%
+    margin: 0 auto
+    position: relative
+    padding: 0 55px
+
+    @media (max-width: $breakpoint-sm)
+      padding: 0
+
+  //&__slides
+  //  margin: 0 55px
+
+  &__slide
+    display: none
+    position: relative
+    height: 270px
+    &.tns-item
+      display: block
+    &:first-child
+      display: block
+    @media (max-width: $breakpoint-sm)
+      padding: 0 20px
+      height: auto
+
+  &__image
+    position: absolute
+    left: 245px
+    top: 135px
+    @media (max-width: $breakpoint-md)
+      left: 180px
+    @media (max-width: $breakpoint-sm)
+      position: relative
+      left: 0
+      top: 0
+      margin-bottom: 16px
+      height: 266px
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      z-index: -1
+      border: 21px solid #efeff4
+      width: 200px
+      height: 266px
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+
+    img
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      box-shadow: 2px 10px 18px rgba(#767676, .5)
+      @media (max-width: $breakpoint-sm)
+      //  position: static
+      //  transform: none
+        max-width: 100%
+
+  &__content
+    margin-left: 420px
+    display: flex
+    height: 100%
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    @media (max-width: $breakpoint-md)
+      margin-left: 360px
+    @media (max-width: $breakpoint-sm)
+      margin: 0
+
+  &__header, &__text
+    max-width: 400px
+    width: 100%
+    margin: 0 auto
+    @media (max-width: $breakpoint-sm)
+      text-align: center
+      max-width: none
+
+  &__header
+    font-size: 20px
+    line-height: 51px
+    font-weight: 800
+    margin-bottom: 8px
+
+  &__text
+    font-size: 17px
+    line-height: 25px
+    color: #505050
+    
+  &__prev, &__next
+    position: absolute
+    background: url(images/sprite-arrow.svg)
+    opacity: .7
+    top: 85px
+    cursor: pointer
+    anim()
+    @media (max-width: $breakpoint-sm)
+      display: none
+
+    &:hover
+      opacity: 1
+
+  &__prev
+    left: 0
+    transform: rotate(180deg)
+
+  &__next
+    right: 0
+
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 35px 0 55px
+
+  &__dot
+    position: relative
+    width: 26px
+    height: 26px
+    background: transparent
+    margin: 0 8px
+    anim()
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      transform: translate(-50%, -50%)
+      top: 50%
+      left: 50%
+      border-radius: 50%
+      anim()
+
+    &:before
+      width: 10px
+      height: 10px
+
+    &:after
+      width: 12px
+      height: 12px
+      background: #d7d7d7
+
+    &.tns-nav-active
+      &:before
+        width: 26px
+        height: 26px
+        background: #dea751
+
+      &:after
+        width: 10px
+        height: 10px
+        background: #fff
+
+
+  &__note
+    font-size: 15px
+    line-height: 25px
+    color: #7c7c88
+    text-align: center
+
+    &:before
+      content: ''
+      display: inline-block
+      vertical-align: sub
+      background: url(images/sprite-note.svg)
+      margin-right: 18px

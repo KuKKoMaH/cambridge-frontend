@@ -1,0 +1,91 @@
+.video
+  padding: 104px 0 150px
+  background: #18215b url(video-bg.jpg) 50% 50% no-repeat
+  background-size: cover
+  color: #ffffff
+  @media (max-width: $breakpoint-sm)
+    background-image: none
+    padding: 45px 0 69px
+
+  &__container
+    width: 100%
+    max-width: 950px + 90px +90px
+    position: relative
+    cursor: pointer
+    margin: 0 auto
+    padding: 0 70px
+    @media (max-width: $breakpoint-sm)
+      padding: 0 10px
+
+  &__video
+    visibility: hidden
+    position: relative
+    width: 100%
+    &:before
+      content:''
+      display: block
+      padding-top: 56.25%
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      background: url(images/sprite-play.svg)
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      opacity: .7
+      transition: all .1s ease-out
+
+    &:hover
+      &:after
+        opacity: 1
+
+    img, iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      max-width: 100%
+      max-height: 100%
+
+    iframe
+      z-index: 1
+      background: #000000
+
+  &__title
+    visibility: hidden
+    position: absolute
+    font-size: 54px
+    line-height: 52px
+    font-weight: 900
+    left: 0px
+    bottom: -70px
+    pointer-events: none
+    z-index: 1
+    @media (max-width: $breakpoint-sm)
+      position: static
+      font-size: 32px
+      line-height: 32px
+      margin-top: 46px
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      background: #dbb06c
+      width: 130px
+      height: 6px
+      bottom: -27px
+
+  &__cta
+    visibility: hidden
+    font-weight: bold
+    font-size: 14px
+    line-height: 52px
+    position: absolute
+    top: 36px
+    right: 45px + 90px
+    pointer-events: none
+    @media (max-width: $breakpoint-sm)
+      display: none

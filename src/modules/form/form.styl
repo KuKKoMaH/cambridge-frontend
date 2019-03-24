@@ -1,0 +1,162 @@
+.form
+  overflow: hidden
+  background: #f0f0f0
+  padding: 77px 0 62px
+  @media (max-width: $breakpoint-sm)
+    padding: 55px 0 45px
+
+  &__content
+    display: flex
+    @media (max-width: $breakpoint-sm)
+      flex-direction: column
+
+  &__left
+    visibility: hidden
+    flex: 1
+    margin-right: 20px
+    position: relative
+    z-index: 2
+
+    &:after
+      content: ''
+      display: block
+      width: 157px
+      height: 7px
+      background: #e2af5f
+      margin-top: 36px
+      @media (max-width: $breakpoint-sm)
+        margin-top: 26px
+        margin-bottom: 59px
+
+  &__title
+    font-size: 36px
+    line-height: 50px
+    font-weight: 800
+    color: #222568
+
+  &__subtitle
+    font-size: 42px
+    line-height: 50px
+    margin-bottom: 33px
+    @media (max-width: $breakpoint-sm)
+      font-size: 34px
+      line-height: 37px
+
+  &__text
+    font-size: 20px
+    line-height: 30px
+
+    b
+      display: inline-block
+      font-size: 33px
+      font-weight: 800
+      margin: 15px 0
+
+  &__right
+    visibility: hidden
+    position: relative
+    align-self: flex-start
+    width: 100%
+    max-width: 450px
+    min-width: 320px
+    z-index: 1
+    @media (max-width: $breakpoint-md)
+      max-width: 400px
+    @media (max-width: $breakpoint-sm)
+      max-width: none
+      min-width: auto
+
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      background: url(./girl.png)
+      width: 514px
+      height: 764px
+      right: 100%
+      top: 0
+      z-index: -1
+      margin-right: -160px
+      margin-top: -200px
+      @media (max-width: $breakpoint-sm)
+        display: none
+        background: none
+
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      left: -5px
+      top: -5px
+      right: -5px
+      bottom: -5px
+      background: url(../excursionForm/bg.png) 33px
+      z-index: -1
+
+  &__form
+    background: #222764
+    padding: 35px 18px 39px
+    text-align: center
+    @media (max-width: $breakpoint-sm)
+      padding: 35px 10px 25px
+
+    &:before
+      content: ''
+      display: block
+      background: url(images/sprite-arrow-down-white.svg)
+      margin: 0 auto 56px
+      @media (max-width: $breakpoint-sm)
+        margin-bottom: 27px
+
+  &__input
+    max-width 270px
+    width: 100%
+    margin: 0 auto 23px
+    display: block
+    border: 1px solid #E2AF5F
+    border-radius: 2px
+    font-size: 15px
+    line-height: 30px
+    padding: 10px 17px 8px
+    color: #ffffff
+    flex: 1
+
+    &::-webkit-input-placeholder {color:#fff;}
+    &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+    &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+    &:-ms-input-placeholder      {color:#fff;}
+
+    //@media (max-width: $breakpoint-md)
+    //  width: 100%
+    //  margin-right: 0
+    //  margin-bottom: 9px
+
+
+  &__submit
+    display: block
+    max-width 270px
+    width: 100%
+    margin: 0 auto 23px
+    background: #dbb06b
+    border-radius: 2px
+    padding: 20px 22px 15px
+    font-size: 15px
+    line-height: 1
+    color: #ffffff
+    font-weight: 800
+    @media (max-width: $breakpoint-md)
+      width: 100%
+      padding-left: 0
+      padding-right: 0
+
+  &__link
+    font-size: 15px
+    line-height: 30px
+    text-align: center
+    color: rgba(#fff, .3)
+    anim()
+
+    &:hover
+      color: rgba(#fff, .7)

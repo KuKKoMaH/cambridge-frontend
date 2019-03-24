@@ -1,0 +1,187 @@
+$root = '.sliders'
+
+.sliders
+  background: #f0f0f0
+  overflow: hidden
+
+  &__slider
+    visibility: hidden
+    width: 100%
+    position: relative
+    height: 460px
+    overflow: hidden
+    @media (max-width: $breakpoint-sm)
+      height: auto
+      //padding-bottom: 100px
+
+    &--reverse
+      {$root}
+        &__image
+          right: auto
+          left: 0
+
+        &__content
+          left: 50%
+          padding-left: 89px
+          @media (max-width: $breakpoint-md)
+            padding-left 22px
+          @media (max-width: $breakpoint-sm)
+            left: 0
+            padding-left: 0
+
+        &__prev, &__next
+          left: 50%
+          margin-left: 89px
+          @media (max-width: $breakpoint-md)
+            margin-left: 22px
+          @media (max-width: $breakpoint-sm)
+            margin-left: 0
+
+  &__slides
+    width: 100%
+    @media (max-width: $breakpoint-sm)
+      position: relative
+      overflow: hidden
+
+  &__slide
+    @media (max-width: $breakpoint-sm)
+      display: none
+      &:first-child
+        display: block
+      .w
+        flex-direction: column-reverse
+        padding: 20px 20px 0
+
+    &:first-child
+      .sliders__content, .sliders__image
+        visibility: hidden
+
+  &__content
+    position: relative
+    width: 50%
+    height: 460px
+    padding-bottom: 102px
+    padding-right: 22px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @media (max-width: $breakpoint-md)
+      padding-bottom: 62px
+    @media (max-width: $breakpoint-sm)
+      height: auto
+      padding-bottom: 0
+      padding-right: 0
+      width: 100%
+
+  &__image
+    position: absolute
+    right: 0
+    top: 0
+    width: 50%
+    height: 100%
+    overflow: hidden
+    background-position: 50% 50%
+    background-size: cover
+    @media (max-width: $breakpoint-sm)
+      position: static
+      height: 320px
+      width: 100%
+      margin-bottom: 22px
+
+  &__prev, &__next
+    position: absolute
+    background: url(images/sprite-arrow.svg)
+    opacity: .7
+    anim()
+    z-index: 2
+    bottom: 55px
+    cursor: pointer
+    @media (max-width: $breakpoint-md)
+      bottom: 15px
+    @media (max-width: $breakpoint-sm)
+      display: none
+
+    &:hover
+      opacity: 1
+
+  &__prev
+    transform: rotate(180deg)
+
+  &__next
+    transform: translateX(61px)
+
+  &__subtitle
+    font-size: 16px
+    line-height: 30px
+    color: #b5b5b5
+    font-weight: 800
+    margin-bottom: 20px
+    @media (max-width: $breakpoint-sm)
+      margin-bottom: 16px
+
+  &__title
+    font-size: 29px
+    line-height: 34px
+    font-weight: 800
+    margin-bottom: 15px
+    @media (max-width: $breakpoint-sm)
+      font-size: 20px
+      line-height: 26px
+      margin-bottom: 11px
+
+  &__text
+    font-size: 17px
+    line-height: 25px
+    color: #505050
+
+    p
+      margin-bottom: 19px
+
+      &:last-child
+        margin-bottom: 0
+
+  &__nav
+    display: none
+    @media (max-width: $breakpoint-sm)
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 35px 0 55px
+
+  &__dot
+    position: relative
+    width: 26px
+    height: 26px
+    background: transparent
+    margin: 0 8px
+    anim()
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      transform: translate(-50%, -50%)
+      top: 50%
+      left: 50%
+      border-radius: 50%
+      anim()
+
+    &:before
+      width: 10px
+      height: 10px
+
+    &:after
+      width: 12px
+      height: 12px
+      background: #d7d7d7
+
+    &.tns-nav-active
+      &:before
+        width: 26px
+        height: 26px
+        background: #dea751
+
+      &:after
+        width: 10px
+        height: 10px
+        background: #fff
