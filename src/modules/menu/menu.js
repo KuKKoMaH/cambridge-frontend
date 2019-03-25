@@ -21,6 +21,7 @@ let lastDirection = 1;
 $(window).on('scroll', () => {
   const currentPosition = $html.scrollTop();
   const diff = currentPosition - prevPosition;
+  if (!diff) return;
   prevPosition = currentPosition;
   const direction = diff > 0 ? 1 : -1;
   const offset = direction > 0
