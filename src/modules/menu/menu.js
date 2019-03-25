@@ -16,7 +16,7 @@ const $html = $('html');
 const $wrapper = $('.menu__wrapper');
 const menuHeight = 84;
 let prevPosition = $html.scrollTop();
-let initialPosition = prevPosition;
+let initialPosition = prevPosition - menuHeight;
 let lastDirection = 1;
 $(window).on('scroll', () => {
   const currentPosition = $html.scrollTop();
@@ -27,9 +27,9 @@ $(window).on('scroll', () => {
   const offset = direction > 0
     ? Math.min(menuHeight, currentPosition - initialPosition)
     : Math.max(0, menuHeight - (initialPosition - currentPosition));
-  console.log(offset);
+  // console.log(offset);
   if (direction !== lastDirection) {
-    console.log('dir');
+    // console.log('dir');
     // initialPosition = menuHeight + currentPosition - initialPosition;
     initialPosition = currentPosition;
     lastDirection = direction;
