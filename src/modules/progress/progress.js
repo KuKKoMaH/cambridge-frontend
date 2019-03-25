@@ -21,7 +21,7 @@ ScrollReveal().reveal('.progress__slider', {
         // autoHeight:   big ? false : true,
         // animateIn:    "jello",
         // animateOut:   "rollOut",
-        speed:        150,
+        // speed:        150,
         items:        1,
         prevButton:   $node.find('.progress__prev')[0],
         nextButton:   $node.find('.progress__next')[0],

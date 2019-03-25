@@ -9,7 +9,7 @@ let map = null;
 const loadMap = () => {
   if (loaded) return;
   loaded = true;
-  scriptLoader('http://api-maps.yandex.ru/2.1/?lang=ru_RU&ver=1&onload=INIT_MAP');
+  scriptLoader('https://api-maps.yandex.ru/2.1/?lang=ru_RU&ver=1&onload=INIT_MAP');
 };
 
 const destroyMap = () => {

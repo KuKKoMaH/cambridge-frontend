@@ -12,18 +12,21 @@
     <div class="menu">
       <button class="menu__button"></button>
       <div class="menu__wrapper">
-        <div class="c menu__content"><img class="menu__logo" src="img/modules-menu-menu-logo.png">
-          <div class="menu__items">
-            <div class="menu__pointer"></div>
-            <ul>
-              <li><a href="#about">О ЛИЦЕЕ</a></li>
-              <li><a href="#progress">ОТ 2 ДО 18</a></li>
-              <li><a href="#programs">ПРОГРАММЫ</a></li>
-              <li><a href="#afterschool">ПОСЛЕ УРОКОВ</a></li>
-              <li><a href="#">ПРЕИМУЩЕСТВА</a></li>
-              <li><a href="#prices">СТОИМОСТЬ</a></li>
-              <li><a href="#contacts">КАК ПОПАСТЬ</a></li>
-            </ul>
+        <div class="menu__content">
+          <div class="menu__data">
+            <div class="menu__logo"><img src="img/modules-menu-menu-logo.png"></div>
+            <div class="menu__items">
+              <div class="menu__pointer"></div>
+              <ul>
+                <li><a href="#about">О ЛИЦЕЕ</a></li>
+                <li><a href="#progress">ОТ 2 ДО 18</a></li>
+                <li><a href="#programs">ПРОГРАММЫ</a></li>
+                <li><a href="#afterschool">ПОСЛЕ УРОКОВ</a></li>
+                <li><a href="#">ПРЕИМУЩЕСТВА</a></li>
+                <li><a href="#prices">СТОИМОСТЬ</a></li>
+                <li><a href="#contacts">КАК ПОПАСТЬ</a></li>
+              </ul>
+            </div>
           </div>
           <div class="menu__buttons">
             <div class="menu__phone"><a href="tel:123">8 (499) 110-72-99</a></div><a class="menu__excursion" href="#">ЗАПИСАТЬСЯ НА ЭКСКУРСИЮ</a>
@@ -39,6 +42,7 @@
         <div class="head__subtitle">Готовим к поступлению в лучшие<br> вузы Британии, Европы и России</div>
         <div class="head__license">Лицензия Министерства образования Российской<br> Федерации №037184 от 29 февраля 2016 г.</div>
       </div>
+      <div class="triangle head__triangle" data-paroller-factor="-0.1"></div>
     </div>
     <div class="c excursion">
       <div class="excursion__info">
@@ -68,6 +72,7 @@
       </div>
     </div>
     <div class="about" id="about">
+      <div class="triangle about__triangle" data-paroller-factor="-0.1"></div>
       <div class="c">
         <div class="about__title">О Лицее</div>
         <div class="about__wrapper">
@@ -215,8 +220,10 @@
           </div>
         </div>
       </div>
+      <div class="triangle sliders__triangle" data-paroller-factor="-0.1"></div>
     </div>
     <div class="progress" id="progress">
+      <div class="triangle progress__triangle" data-paroller-factor="-0.1"></div>
       <div class="progress__title">У нас учатся дети от 2 до 18 лет</div>
       <div class="progress__subtitle">Вы можете привести к нам ребенка в 2 года, и за 16 лет<br>
         он приобретет в процессе обучения всё необходимое, чтобы<br>
@@ -263,6 +270,7 @@
       <div class="progress__note">Есть взможность поступления в любой класс по возрасту после собеседования с ребенком.</div>
     </div>
     <div class="programs" id="programs">
+      <div class="triangle programs__triangle" data-paroller-factor="-0.1"></div>
       <div class="programs__title">Программы кембриджского лицея</div>
       <div class="programs__subtitle">Выбирайте наиболее подходящий вам и вашему<br> ребенку вариант обучения</div>
       <div class="programs__slider">
@@ -480,11 +488,12 @@
       </div>
     </div>
     <div class="stats" id="stats">
+      <div class="triangle stats__triangle" data-paroller-factor="-0.1"></div>
       <div class="stats__title">Статистика школы за 2016-2017 года</div>
       <div class="stats__slider">
         <div class="stats__items">
           <div class="stats__item">
-            <div class="stats__chart" data-to="80">
+            <div class="stats__chart" data-to="80" data-length="540">
               <svg class="stats__round">
                 <circle class="pie" r="86" cx="86" cy="86"></circle>
               </svg>
@@ -493,7 +502,7 @@
             <div class="stats__text">Участники олимпиад среди всех обучающихся в Кембриджской школе</div>
           </div>
           <div class="stats__item">
-            <div class="stats__chart" data-to="63">
+            <div class="stats__chart" data-to="63" data-length="540">
               <svg class="stats__round">
                 <circle class="pie" r="86" cx="86" cy="86"></circle>
               </svg>
@@ -502,7 +511,7 @@
             <div class="stats__text">Выпускников, получивших 220 и более баллов ЕГЭ в сумме за 3 общеобразовательных</div>
           </div>
           <div class="stats__item">
-            <div class="stats__chart" data-to="61">
+            <div class="stats__chart" data-to="61" data-length="540">
               <svg class="stats__round">
                 <circle class="pie" r="86" cx="86" cy="86"></circle>
               </svg>
@@ -525,6 +534,7 @@
       </div>
     </div>
     <div class="video">
+      <div class="triangle video__triangle" data-paroller-factor="-0.1"></div>
       <div class="w">
         <div class="video__container">
           <div class="video__video" data-url="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&amp;rel=0&amp;fs=1"><img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"></div>
@@ -534,6 +544,7 @@
       </div>
     </div>
     <div class="afterschool" id="afterschool">
+      <div class="triangle afterschool__triangle" data-paroller-factor="-0.1"></div>
       <div class="afterschool__title">Занятия после уроков</div>
       <div class="afterschool__slider">
         <div class="w afterschool__arrows">
@@ -568,12 +579,13 @@
       <div class="afterschool__note">Всё перечисленное входит в стоимость обучения. Вам не придется ни за что доплачивать!</div>
     </div>
     <div class="advantages" id="advantages">
+      <div class="triangle advantages__triangle" data-paroller-factor="-0.1"></div>
       <div class="advantages__title">9 причин учиться у нас</div>
       <div class="c advantages__content">
         <div class="advantages__banner">
           <div class="advantages__banner-number">9</div>
           <div class="advantages__banner-text">ОСНОВНЫХ ПРИЧИН УЧИТЬСЯ У НАС</div>
-          <button class="advantages__banner-button">ЗАПИСАТЬСЯ НА ЭКСКУРСИЮ</button>
+          <button class="advantages__banner-button">ЗАПИСАТЬСЯ<br>НА ЭКСКУРСИЮ</button>
         </div>
         <div class="advantages__right">
           <div class="advantages__slider">
@@ -644,6 +656,7 @@
       </div>
     </div>
     <div class="prices" id="prices">
+      <div class="triangle prices__triangle" data-paroller-factor="-0.1"></div>
       <div class="prices__top">
         <div class="prices__title">Стоимость обучения</div>
         <div class="prices__subtitle">В кембриджском лицее в москве</div>
@@ -727,6 +740,7 @@
       <button class="prices__button">ЧТО ВХОДИТ В ОПЛАТУ</button>
     </div>
     <div class="testimonials">
+      <div class="triangle testimonials__triangle" data-paroller-factor="-0.1"></div>
       <div class="testimonials__title">Впечатления родителей</div>
       <div class="testimonials__tabs-headers">
         <div class="testimonials__tabs-header testimonials__tabs-header--active">ВИДЕО ОТЗЫВЫ</div>
@@ -761,6 +775,7 @@
       </div>
     </div>
     <div class="form">
+      <div class="triangle form__triangle" data-paroller-factor="-0.1"></div>
       <div class="c form__content">
         <div class="form__left">
           <div class="form__title">ЗАПИШИТЕСЬ НА ЭКСКУРСИЮ</div>
@@ -777,6 +792,7 @@
       </div>
     </div>
     <div class="contacts" id="contacts">
+      <div class="triangle contacts__triangle2" data-paroller-factor="-0.1"></div>
       <div class="c contacts__cols">
         <div class="contacts__col">
           <div class="contacts__title">Приезжайте к нам</div>
@@ -821,6 +837,7 @@
           <div class="contacts__col2"><a class="contacts__primary" href="#" target="_blank"><b>ОСНОВНОЙ САЙТ:</b>http://cultus.ru</a></div>
         </div>
       </div>
+      <div class="triangle contacts__triangle" data-paroller-factor="-0.1"></div>
     </div>
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="pswp__bg"></div>

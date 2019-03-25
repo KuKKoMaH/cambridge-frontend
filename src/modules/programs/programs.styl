@@ -179,14 +179,25 @@
   &__program
     max-height: 0;
     overflow: hidden
-
-    & > *
-      anim(.3s)
-      opacity: 0
-      transform: translateY(50px)
+    opacity: 0
+    transition: all .3s linear
+    //anim(.3s)
+    //& > *
+    //  anim(.3s)
+    //  opacity: 0
+    //  transform: translateY(50px)
 
     &--active
-      max-height: none
-      & > *
-        opacity: 1
-        transform: none
+      opacity: 1
+
+    //  max-height: none
+    //  & > *
+    //    opacity: 1
+    //    transform: none
+
+  &__triangle
+    margin-top: -50px
+    left: 50%
+    margin-left: -597px
+    border-width: 61px 0 0 63px
+    border-color: transparent transparent transparent #ce3934

@@ -1,6 +1,7 @@
 import 'jquery';
 import 'magnific-popup/dist/jquery.magnific-popup.js';
 import 'jquery.maskedinput/src/jquery.maskedinput';
+import './js/$.paroller.js';
 
 import './init';
 import './modules/menu/menu';
@@ -37,3 +38,11 @@ window.onpageshow = function (event) {
     window.location.reload()
   }
 };
+
+$('.triangle')
+  .paroller({
+    direction: 'vertical',
+    type: 'foreground',
+    transition: null
+  })
+  .addClass('triangle--active');

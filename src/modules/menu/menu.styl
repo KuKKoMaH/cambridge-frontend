@@ -2,12 +2,13 @@
   &__wrapper
     width: 100%
     height: 84px
+    top: -84px
     background: #ffffff
     position: fixed
-    top: 0
     left: 0
     z-index: 100
     @media (max-width: $breakpoint-sm)
+      top: 0 !important
       display: none
       height: 100%
       padding-top: 124px
@@ -22,6 +23,13 @@
       flex-direction: column
       padding-left: 0
       height: auto
+
+  &__data
+    flex: 1
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-around
 
   &__button
     position: fixed
@@ -61,13 +69,15 @@
         display: block
 
   &__logo
+    //flex: 1
     @media (max-width: $breakpoint-sm)
       display: none
 
   &__items
+    //flex: 1
     margin: 0 20px
     position: relative
-    flex: 1 1 auto
+    //flex: 1 1 auto
     height: 100%
     white-space: nowrap
     @media (max-width: $breakpoint-sm)
@@ -116,6 +126,7 @@
     position: absolute
 
   &__buttons
+    margin-left: auto
     display: flex
     height: 100%
     @media (max-width: $breakpoint-md)

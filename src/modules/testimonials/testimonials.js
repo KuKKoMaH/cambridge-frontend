@@ -14,7 +14,7 @@ const initSliders = () => {
     mode:         'carousel',
     mouseDrag:    true,
     controls:     false,
-    speed:        150,
+    // speed:        150,
     items:        1,
     // gutter:       14,
     navContainer: $node.find('.testimonials__nav')[0],

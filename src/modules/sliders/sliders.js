@@ -36,7 +36,7 @@ const initSliders = (big) => {
       // autoHeight:   big ? false : true,
       // animateIn:    "jello",
       // animateOut:   "rollOut",
-      speed:        150,
+      // speed:        150,
       items:        1,
       prevButton:   $node.find('.sliders__prev')[0],
       nextButton:   $node.find('.sliders__next')[0],

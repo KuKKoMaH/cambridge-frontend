@@ -14,7 +14,7 @@ function onClickProgram() {
   const $program = $(`.programs__program[data-program="${program}"]`);
   if (!$program.length) return;
   $program.addClass('programs__program--active');
-
+  $program.css('maxHeight', $program[0].scrollHeight);
   scroll.animateScroll($program[0], null, { offset: 100 });
 }
 
@@ -26,7 +26,7 @@ const initSliders = () => {
     mode:         'carousel',
     mouseDrag:    true,
     controls:     false,
-    speed:        150,
+    // speed:        150,
     items:        1,
     // gutter:       14,
     navContainer: $node.find('.programs__nav')[0],

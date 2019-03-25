@@ -27,7 +27,7 @@ const slider = tns({
   container:  $node.find('.steps__slides')[0],
   mode:       'carousel',
   mouseDrag:  true,
-  speed:      150,
+  // speed:      150,
   items:      1,
   nav:        false,
   prevButton: $node.find('.steps__prev')[0],

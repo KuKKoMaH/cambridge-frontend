@@ -5,20 +5,24 @@ import ScrollReveal from 'scrollreveal';
 
 let slider;
 
-$('.stats__round').find('circle').each((i, el) => {
-  const length = el.getTotalLength();
-  el.style.strokeDasharray = `1px ${length}px`;
-  el.classList.add('stats--inited');
+$('.stats__chart').each((i, el) => {
+  //.stats__round
+  const $chart = $(el);
+  const $round = $chart.find('circle');
+  const length = +$chart.data('length');
+  $round.css('strokeDasharray', `1px ${length}px`);
+  $round.addClass('stats--inited');
 });
 
 const startAnimate = ($chart) => {
   if ($chart.data('inited')) return;
   const circle = $chart.find('circle')[0];
   const to = $chart.data('to');
-  const length = circle.getTotalLength();
+  const length = $chart.data('length');
 
   const countUp = new CountUp($chart.find('.stats__number')[0], to, {
     startVal:     0,
+    useEasing:    false,
     duration:     1.5,
     formattingFn: (n) => n + '%',
   });
@@ -44,7 +48,7 @@ const initSliders = () => {
     mode:         'carousel',
     mouseDrag:    true,
     controls:     false,
-    speed:        150,
+    // speed:        150,
     items:        1,
     navContainer: $node.find('.stats__nav')[0],
   });
