@@ -53,6 +53,10 @@
       z-index: 1
       background: #000000
 
+  &__text
+    width: 100%
+    position: relative
+
   &__title
     visibility: hidden
     position: absolute
@@ -63,6 +67,8 @@
     bottom: -70px
     pointer-events: none
     z-index: 1
+    @media (min-width: $breakpoint-lg)
+      left: 70px
     @media (max-width: $breakpoint-sm)
       position: static
       font-size: 32px

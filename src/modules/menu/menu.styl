@@ -7,12 +7,16 @@
     position: fixed
     left: 0
     z-index: 100
+    anim()
     @media (max-width: $breakpoint-sm)
       top: 0 !important
       display: none
       height: 100%
       padding-top: 124px
       overflow: auto
+
+    &--active
+      top: 0
 
   &__content
     display: flex
