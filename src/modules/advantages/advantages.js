@@ -3,7 +3,7 @@ import { tns } from "tiny-slider/src/tiny-slider";
 import ScrollReveal from 'scrollreveal';
 
 const ITEMS_PER_SLIDE = 3;
-const $node = $('.advantages__slider');
+let $node = $('.advantages__slider');
 
 let slider = null;
 
@@ -20,16 +20,11 @@ ScrollReveal().reveal('.advantages__right', {
 });
 
 Breakpoints.on('sm', 'enter', () => {
-  // destroyMap();
-  // ScrollReveal().clean('.contacts__col, .contacts__col2');
-  // ScrollReveal().reveal('.contacts__col, .contacts__col2', {
-  //   distance:    '50px',
-  //   viewFactor:  .2,
-  // })
   if (slider) {
     slider.destroy();
     $('.advantages__slide').unwrap();
   }
+  $node = $('.advantages__slider');
   slider = tns({
     container:    $node.find('.advantages__slides')[0],
     navContainer: $node.find('.advantages__nav')[0],
@@ -37,15 +32,6 @@ Breakpoints.on('sm', 'enter', () => {
   });
 });
 Breakpoints.on('lg', 'enter', () => {
-  // ScrollReveal().clean('.contacts__col, .contacts__col2');
-  // ScrollReveal().reveal('.contacts__col, .contacts__col2', {
-  //   distance:    '50px',
-  //   viewFactor:  .2,
-  //   afterReveal: (el) => {
-  //     if ($(el).find('#map').length) initMap();
-  //   },
-  // })
-
   if (slider) slider.destroy();
 
   let $slides = $('.advantages__slide');

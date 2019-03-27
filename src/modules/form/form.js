@@ -5,7 +5,7 @@ ScrollReveal().reveal('.form__left', {
   origin:   'left',
 });
 
-ScrollReveal().reveal('.form__right', {
+ScrollReveal().reveal('.form__form-wrapper', {
   distance: '50px',
   origin:   'right',
 });

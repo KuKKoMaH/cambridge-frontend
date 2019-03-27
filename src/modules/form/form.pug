@@ -1,13 +1,15 @@
 .form
   .triangle.form__triangle(data-paroller-factor="-0.1")
-  .c.form__content
-    .form__left
-      .form__title ЗАПИШИТЕСЬ НА ЭКСКУРСИЮ
-      .form__subtitle по Кембриджскому лицею#[br] в удобное для вас время
-      .form__text Для этого позвоните нам по номеру:#[br] #[b 8 (499) 264-11-11]#[br] или заполните форму, и мы свяжемся#[br] с вами в течение рабочего дня.
-    .form__right
-      .form__form
-        input.form__input(placeholder='Как к вам обращаться:')
-        input.form__input(placeholder='Ваш телефон или e-mail:')
-        input.form__submit(type='submit' value='ЗАПИСАТЬСЯ НА ЭКСКУРСИЮ')
-        a.form__link(href='#' target='_blank') политика конфиденциальности
+  .form__inner
+    .c.form__content
+      .form__left
+        .form__title ЗАПИШИТЕСЬ НА ЭКСКУРСИЮ
+        .form__subtitle по Кембриджскому лицею#[br] в удобное для вас время
+        .form__text Для этого позвоните нам по номеру:#[br] #[b 8 (499) 264-11-11]#[br] или заполните форму, и мы свяжемся#[br] с вами в течение рабочего дня.
+      .form__right
+        .form__form-wrapper
+          .form__form
+            input.form__input(placeholder='Как к вам обращаться:')
+            input.form__input(placeholder='Ваш телефон или e-mail:')
+            input.form__submit(type='submit' value='ЗАПИСАТЬСЯ НА ЭКСКУРСИЮ')
+            a.form__link(href='#' target='_blank') политика конфиденциальности

@@ -2,14 +2,29 @@ import { tns } from "tiny-slider/src/tiny-slider";
 import Breakpoints from 'breakpoints-js';
 import ScrollReveal from 'scrollreveal';
 
+$('.testimonials__tabs-header').on('click', function () {
+  const $el = $(this);
+  const index = $el.index();
+
+  $('.testimonials__tabs-header')
+    .removeClass('testimonials__tabs-header--active')
+    .eq(index)
+    .addClass('testimonials__tabs-header--active');
+
+  $('.testimonials__tab')
+    .removeClass('testimonials__tab--active')
+    .eq(index)
+    .addClass('testimonials__tab--active');
+});
+
 $('.testimonials__video').magnificPopup({ type: 'iframe', });
 
-let slider;
+let sliderVideos;
+let sliderSocials;
 
-const initSliders = () => {
-  destroySlider();
-  const $node = $('.testimonials__slider');
-  slider = tns({
+const initVideosSliders = () => {
+  const $node = $('.testimonials__videos');
+  sliderVideos = tns({
     container:    $node.find('.testimonials__items')[0],
     mode:         'carousel',
     mouseDrag:    true,
@@ -21,22 +36,41 @@ const initSliders = () => {
   });
 };
 
+const initSocialsSliders = (isBig) => {
+  const $node = $('.testimonials__socials');
+  sliderVideos = tns({
+    container:    $node.find('.testimonials__items')[0],
+    mode:         'carousel',
+    mouseDrag:    true,
+    items:        isBig ? 2 : 1,
+    gutter:       isBig ? 40 : 0,
+    prevButton:   $node.find('.testimonials__prev')[0],
+    nextButton:   $node.find('.testimonials__next')[0],
+    nav:          isBig ? false : true,
+    navContainer: isBig ? null : $node.find('.testimonials__nav')[0],
+  });
+};
+
 const destroySlider = () => {
-  if (slider) slider.destroy();
-  slider = null;
+  if (sliderVideos) sliderVideos.destroy();
+  sliderVideos = null;
+  if (sliderSocials) sliderSocials.destroy();
+  sliderSocials = null;
 };
 
 Breakpoints.on('sm', 'enter', () => {
   ScrollReveal().clean('.testimonials__item');
-  ScrollReveal().reveal('.testimonials__slider', {
+  ScrollReveal().reveal('.testimonials__videos', {
     distance:   '50px',
     interval:   80,
     viewFactor: .2,
   });
-  initSliders()
+  destroySlider();
+  initVideosSliders();
+  initSocialsSliders(false);
 });
 Breakpoints.on('lg', 'enter', () => {
-  ScrollReveal().clean('.testimonials__slider');
+  ScrollReveal().clean('.testimonials__videos');
   ScrollReveal().reveal('.testimonials__item', {
     distance:   '50px',
     interval:   80,
@@ -44,4 +78,5 @@ Breakpoints.on('lg', 'enter', () => {
   });
 
   destroySlider();
+  initSocialsSliders(true);
 });

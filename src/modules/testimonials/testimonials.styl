@@ -29,6 +29,7 @@
     display: flex
     justify-content: center
     margin-bottom: 57px
+    flex-wrap: wrap
     @media (max-width: $breakpoint-sm)
       margin-bottom: 46px
 
@@ -47,10 +48,34 @@
       color: #2e2e2e
       border-color: #E2AF5F
 
-  &__slider
+  &__tabs
+    position: relative
+
+  &__tab
+    top: 0
+    left: 0
+    width: 100%
+    position: absolute
+    opacity: 0
+    z-index: -1
+    anim()
+
+    &--active
+      position: static
+      opacity: 1
+
+  &__videos
     flex: 1
     @media (max-width: $breakpoint-sm)
       visibility: hidden
+
+  &__socials
+    flex: 1
+    min-width: 0
+    position: relative
+    padding-right: 70px
+    @media (max-width: $breakpoint-sm)
+      padding-right: 0
 
   &__items
     display: flex
@@ -171,3 +196,71 @@
     margin-left: -553px
     border-width: 0 0 104px 108px;
     border-color: transparent transparent #ce3934 transparent
+
+  &__social
+    padding-left: 109px
+    position: relative
+    @media (max-width: $breakpoint-sm)
+      padding-left: 0
+
+  &__avatar
+    position: absolute
+    left: 0
+    top: 25px
+    border-radius: 8px
+    @media (max-width: $breakpoint-sm)
+      position: static
+      margin-bottom: 12px
+
+  &__text
+    position: relative
+    border: 1px solid #D8D8D8
+    border-radius: 8px
+    padding: 25px 45px 35px 25px
+    font-size: 16px
+    line-height: 25px
+    color: #505050
+
+    &:before, &:after
+      position: absolute
+      content: ''
+      display: block
+      transform: rotate(45deg)
+      border-radius: 4px
+      width: 18px
+      height: 18px
+      left: -8px
+      top: 59px
+      @media (max-width: $breakpoint-sm)
+        display: none
+
+    &:before
+      background: #d8d8d8
+      z-index: -1
+
+    &:after
+      background: #fff
+      z-index: 1
+      margin-left: 1px
+
+  &__prev, &__next
+    position: absolute
+    background: url(images/sprite-arrow.svg)
+    opacity: .7
+    anim()
+    z-index: 2
+    right: 0
+    cursor: pointer
+    outline: 0
+    @media (max-width: $breakpoint-sm)
+      display: none
+
+    &:hover
+      opacity: 1
+
+  &__prev
+    top: 40px
+    transform: rotate(180deg)
+
+  &__next
+    top: 100px

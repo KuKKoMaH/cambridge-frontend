@@ -1,9 +1,11 @@
 .form
-  overflow: hidden
-  background: #f0f0f0
-  padding: 77px 0 62px
-  @media (max-width: $breakpoint-sm)
-    padding: 55px 0 45px
+  position: relative
+  &__inner
+    overflow: hidden
+    background: #f0f0f0
+    padding: 77px 0 62px
+    @media (max-width: $breakpoint-sm)
+      padding: 55px 0 45px
 
   &__content
     display: flex
@@ -53,8 +55,7 @@
       margin: 15px 0
 
   &__right
-    visibility: hidden
-    position: relative
+    //position: relative
     align-self: flex-start
     width: 100%
     max-width: 450px
@@ -66,23 +67,28 @@
       max-width: none
       min-width: auto
 
-
     &:before
       content: ''
       display: block
       position: absolute
       background: url(./girl.png)
-      width: 514px
-      height: 764px
-      right: 100%
+      width: 348px
+      height: 700px
+      left: 50%
       top: 0
       z-index: -1
-      margin-right: -160px
-      margin-top: -200px
+      margin-left: -83px
+      margin-top: -72px
       @media (max-width: $breakpoint-sm)
         display: none
         background: none
 
+
+
+
+  &__form-wrapper
+    visibility: hidden
+    position: relative
 
     &:after
       content: ''
