@@ -15,6 +15,12 @@ block body
     include modules/info/info
     include modules/bullets/bullets
     include modules/collapse/collapse
+  .programs__program(data-program='2')
+    include modules/features/features
+    include modules/steps/steps
+    include modules/info/info
+    include modules/bullets/bullets
+    include modules/collapse/collapse
   include modules/stats/stats
   include modules/video/video
   include modules/afterschool/afterschool
@@ -27,7 +33,8 @@ block body
   include modules/photoswipe/photoswipe
 
 
-  //div.hidden
+  div.hidden
+    include modules/modal/modal
   //  include img/inline-sprite.svg
   //  include modules/popup/popup-callback
   //  include modules/popup/popup-request

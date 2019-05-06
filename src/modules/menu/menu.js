@@ -1,15 +1,9 @@
-import SmoothScroll from 'smooth-scroll';
-
 $('.menu__button').on('click', () => {
   $('.menu').toggleClass('menu--active');
 });
 
 $('.menu__items a').on('click', () => {
   $('.menu').removeClass('menu--active');
-});
-
-new SmoothScroll('.menu__items a', {
-  header: '.menu__wrapper',
 });
 
 // const $html = $('html');
@@ -39,10 +33,10 @@ new SmoothScroll('.menu__items a', {
 // });
 
 const $wrapper = $('.menu__wrapper');
-const $html = $('html');
+const $window = $(window);
 let menuActive = false;
-$(window).on('scroll', () => {
-  const scrollTop = $html.scrollTop();
+$window.on('scroll', () => {
+  const scrollTop = $window.scrollTop();
   if(scrollTop > 10) {
     if(!menuActive) {
       $wrapper.addClass('menu__wrapper--active');

@@ -1,6 +1,7 @@
 import 'jquery';
 import 'magnific-popup/dist/jquery.magnific-popup.js';
 import 'jquery.maskedinput/src/jquery.maskedinput';
+import SmoothScroll from 'smooth-scroll';
 import './js/$.paroller.js';
 
 import './init';
@@ -41,8 +42,10 @@ window.onpageshow = function (event) {
 
 $('.triangle')
   .paroller({
-    direction: 'vertical',
-    type: 'foreground',
+    direction:  'vertical',
+    type:       'foreground',
     transition: null
   })
   .addClass('triangle--active');
+
+new SmoothScroll('a[href*="#"]', { header: '.menu__wrapper', });

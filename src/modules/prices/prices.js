@@ -41,3 +41,5 @@ Breakpoints.on('lg', 'enter', () => {
   });
   destroySlider();
 });
+
+$('.prices__button').magnificPopup({ type: 'inline' });

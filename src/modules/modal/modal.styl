@@ -1,0 +1,76 @@
+.modal
+  max-width: 350px
+  position: relative
+  margin: 0 auto
+  padding: 5px
+  background: url(../excursionForm/bg.png) 33px
+  //&__form-wrapper
+
+  .mfp-close
+    color: #ffffff
+
+  &__form
+    background: #222764
+    padding: 35px 18px 39px
+    text-align: center
+    @media (max-width: $breakpoint-sm)
+      padding: 35px 10px 25px
+
+    &:before
+      content: ''
+      display: block
+      background: url(images/sprite-arrow-down-white.svg)
+      margin: 0 auto 56px
+      @media (max-width: $breakpoint-sm)
+        margin-bottom: 27px
+
+  &__input
+    max-width 270px
+    width: 100%
+    margin: 0 auto 23px
+    display: block
+    border: 1px solid #E2AF5F
+    border-radius: 2px
+    font-size: 15px
+    line-height: 30px
+    padding: 10px 17px 8px
+    color: #ffffff
+    flex: 1
+
+    &::-webkit-input-placeholder {color:#fff;}
+    &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+    &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+    &:-ms-input-placeholder      {color:#fff;}
+
+  //@media (max-width: $breakpoint-md)
+  //  width: 100%
+  //  margin-right: 0
+  //  margin-bottom: 9px
+
+
+  &__submit
+    display: block
+    max-width 270px
+    width: 100%
+    margin: 0 auto 23px
+    background: #dbb06b
+    border-radius: 2px
+    padding: 20px 22px 15px
+    font-size: 15px
+    line-height: 1
+    color: #ffffff
+    font-weight: 800
+    @media (max-width: $breakpoint-md)
+      width: 100%
+      padding-left: 0
+      padding-right: 0
+
+  &__link
+    font-size: 15px
+    line-height: 30px
+    text-align: center
+    color: rgba(#fff, .3)
+    anim()
+
+    &:hover
+      color: rgba(#fff, .7)
