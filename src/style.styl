@@ -4,7 +4,7 @@
 
 //@import "owl.carousel/dist/assets/owl.carousel.css";
 @import "destyle.css/destyle.css"
-@import "magnific-popup/dist/magnific-popup.css";
+//@import "magnific-popup/dist/magnific-popup.css";
 @import "tiny-slider/dist/tiny-slider.css";
 //@import "baron/baron.css";
 //@import "bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.css";
@@ -20,8 +20,15 @@ html
   font-family: 'Circe', sans-serif;
   color: #2e2e2e
 
-body
+html, body
   overflow-x: hidden
+
+.page
+  //anim(.2s)
+  min-height 100vh
+  display: flex
+  flex-direction column
+  will-change filter
 
 
 .triangle
@@ -52,16 +59,19 @@ body
   font-size: 11px
   color: red
   top: 100%
+  left: 0
   margin-top: 4px
 
 .wpcf7-response-output
-  font-size: 12px
-  margin-top: 8px
-  text-align: center
-  color: red
+  display: none !important
+//font-size: 12px
+//margin-top: 8px
+//text-align: center
+//color: red
+//
+//&.wpcf7-mail-sent-ok
+//  color: $green
 
-  &.wpcf7-mail-sent-ok
-    color: $green
 
 @import "modules/menu/menu.styl"
 @import "modules/head/head.styl"
@@ -84,6 +94,7 @@ body
 @import "modules/testimonials/testimonials.styl"
 @import "modules/form/form.styl"
 @import "modules/contacts/contacts.styl"
+@import "modules/modal/mfp.styl"
 @import "modules/modal/modal.styl"
 
 @import "modules/photoswipe/photoswipe.styl"

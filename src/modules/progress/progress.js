@@ -1,5 +1,5 @@
-import { tns } from "tiny-slider/src/tiny-slider";
-import Breakpoints from 'breakpoints-js';
+import { tns }      from "tiny-slider/src/tiny-slider";
+import Breakpoints  from 'breakpoints-js';
 import ScrollReveal from 'scrollreveal';
 
 let sliders;
@@ -9,24 +9,27 @@ ScrollReveal().reveal('.progress__slider', {
   viewFactor:   .2,
   beforeReveal: () => {
 
-    const initSliders = (big) => {
+    const initSliders = ( big ) => {
       if (sliders) destroySliders();
       sliders = [];
       const $node = $('.progress__slider');
-      sliders.push(tns({
-        container:    $node.find('.progress__slides')[0],
-        // mode:         big ? 'gallery' : 'carousel',
-        mode:         'carousel',
-        mouseDrag:    big ? false : true,
-        // autoHeight:   big ? false : true,
-        // animateIn:    "jello",
-        // animateOut:   "rollOut",
-        // speed:        150,
-        items:        1,
-        prevButton:   $node.find('.progress__prev')[0],
-        nextButton:   $node.find('.progress__next')[0],
-        navContainer: $node.find('.progress__nav')[0],
-      }));
+      const $container = $node.find('.progress__slides')[0];
+      if ($container) {
+        sliders.push(tns({
+          container:    $container,
+          // mode:         big ? 'gallery' : 'carousel',
+          mode:         'carousel',
+          mouseDrag:    big ? false : true,
+          // autoHeight:   big ? false : true,
+          // animateIn:    "jello",
+          // animateOut:   "rollOut",
+          // speed:        150,
+          items:        1,
+          prevButton:   $node.find('.progress__prev')[0],
+          nextButton:   $node.find('.progress__next')[0],
+          navContainer: $node.find('.progress__nav')[0],
+        }));
+      }
     };
 
     const destroySliders = () => {
@@ -38,5 +41,5 @@ ScrollReveal().reveal('.progress__slider', {
     Breakpoints.on('sm', 'enter', () => initSliders(false));
     Breakpoints.on('lg', 'enter', () => initSliders(true));
 
-  }
+  },
 });

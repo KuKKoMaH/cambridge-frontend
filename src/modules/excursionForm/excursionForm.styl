@@ -31,6 +31,7 @@
     font-size: 24px
     line-height: 30px
     margin-right: 74px
+    flex-shrink 0
 
     @media (max-width: $breakpoint-lg)
       text-align: center
@@ -44,35 +45,60 @@
       @media (max-width: $breakpoint-lg)
         display: none
 
+  &__right
+    flex: 1
+    @media (max-width: $breakpoint-md)
+      max-width: 370px
+      width: 100%
+
   &__form
     visibility: hidden
     display: flex
     align-items: center
-    flex:1
     @media (max-width: $breakpoint-md)
       flex-direction: column
-      max-width: 370px
-      width: 100%
+
+    & > *
+      flex: 1
+      margin-right: 20px
+      @media (max-width: $breakpoint-md)
+        margin-right: 0
+        margin-bottom: 9px
+
+      &:last-child
+        margin-right: 0;
+        @media (max-width: $breakpoint-md)
+          margin-bottom: 0
+          margin-top: 12px
 
   &__input
-    margin-right: 20px
     border: 1px solid #E2AF5F
     border-radius: 2px
     font-size: 15px
     line-height: 30px
     padding: 10px 17px 8px
-    flex: 1
+    display: block;
+    width: 100%
 
-    &::-webkit-input-placeholder {color:#fff;}
-    &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
-    &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
-    &:-ms-input-placeholder      {color:#fff;}
+    &::-webkit-input-placeholder {
+      color: #fff;
+    }
 
-    @media (max-width: $breakpoint-md)
-      width: 100%
-      margin-right: 0
-      margin-bottom: 9px
+    &::-moz-placeholder {
+      color: #fff;
+    }
 
+    /* Firefox 19+ */
+
+    &:-moz-placeholder {
+      color: #fff;
+    }
+
+    /* Firefox 18- */
+
+    &:-ms-input-placeholder {
+      color: #fff;
+    }
 
   &__submit
     background: #dbb06b

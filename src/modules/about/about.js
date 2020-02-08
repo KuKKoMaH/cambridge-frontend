@@ -23,6 +23,8 @@ $('.about__prev').on('click', () => {
 
   $active.removeClass(activeClass);
   $next.addClass(activeClass);
+
+  nextSlide();
 });
 
 $('.about__next').on('click', () => {
@@ -34,9 +36,21 @@ $('.about__next').on('click', () => {
 
   $active.removeClass(activeClass);
   $next.addClass(activeClass);
+
+  nextSlide();
 });
 
 $('.about__subtext').on('click', () => {
   $('.about__subtext').addClass('about__subtext--hidden');
   $('.about__sub').css('max-height', $('.about__subinner').height());
 });
+let interval = null;
+const intervalTimeout = +$('.about__slider').data('autoscroll');
+function nextSlide() {
+  if (interval) clearInterval(interval);
+  interval = setTimeout(() => {
+    $('.about__next').click();
+  }, intervalTimeout);
+}
+nextSlide();
+

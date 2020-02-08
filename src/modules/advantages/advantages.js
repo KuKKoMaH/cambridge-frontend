@@ -1,5 +1,5 @@
-import Breakpoints from 'breakpoints-js';
-import { tns } from "tiny-slider/src/tiny-slider";
+import Breakpoints  from 'breakpoints-js';
+import { tns }      from "tiny-slider/src/tiny-slider";
 import ScrollReveal from 'scrollreveal';
 
 const ITEMS_PER_SLIDE = 3;
@@ -25,11 +25,14 @@ Breakpoints.on('sm', 'enter', () => {
     $('.advantages__slide').unwrap();
   }
   $node = $('.advantages__slider');
-  slider = tns({
-    container:    $node.find('.advantages__slides')[0],
-    navContainer: $node.find('.advantages__nav')[0],
-    controls:     false,
-  });
+  const $container = $node.find('.advantages__slides')[0];
+  if ($container) {
+    slider = tns({
+      container:    $container,
+      navContainer: $node.find('.advantages__nav')[0],
+      controls:     false,
+    });
+  }
 });
 Breakpoints.on('lg', 'enter', () => {
   if (slider) slider.destroy();
@@ -39,11 +42,14 @@ Breakpoints.on('lg', 'enter', () => {
     $slides.slice(i, i + ITEMS_PER_SLIDE).wrapAll('<div class="advantages__slide-big">');
   }
 
-  slider = tns({
-    container:  $node.find('.advantages__slides')[0],
-    prevButton: $node.find('.advantages__prev')[0],
-    nextButton: $node.find('.advantages__next')[0],
-    nav:        false,
-  });
+  const $container = $node.find('.advantages__slides')[0];
+  if ($container) {
+    slider = tns({
+      container:  $container,
+      prevButton: $node.find('.advantages__prev')[0],
+      nextButton: $node.find('.advantages__next')[0],
+      nav:        false,
+    });
+  }
 });
 

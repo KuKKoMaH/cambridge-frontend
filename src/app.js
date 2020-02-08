@@ -2,9 +2,11 @@ import 'jquery';
 import 'magnific-popup/dist/jquery.magnific-popup.js';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 import SmoothScroll from 'smooth-scroll';
-import './js/$.paroller.js';
+// import './js/$.paroller.js';
 
 import './init';
+import './js/paroller';
+import openPopup    from './js/openPopup';
 import './modules/menu/menu';
 import './modules/excursion/excursion';
 import './modules/excursionForm/excursionForm';
@@ -27,25 +29,31 @@ import './modules/contacts/contacts';
 
 $('input[type="tel"]').mask("+7 (999) 999-99-99");
 
-$('.popup__opener').on('click', (e) => {
+$('.popup__opener').on('click', ( e ) => {
   e.preventDefault();
   e.stopPropagation();
-  $.magnificPopup.open({ type: 'inline', items: { src: $(e.delegateTarget).attr('href') } });
+  openPopup({ items: { src: $(e.delegateTarget).attr('href') } });
   return false;
 });
 
-window.onpageshow = function (event) {
+window.onpageshow = function ( event ) {
   if (event.persisted) {
-    window.location.reload()
+    window.location.reload();
   }
 };
 
 $('.triangle')
-  .paroller({
-    direction:  'vertical',
-    type:       'foreground',
-    transition: null
-  })
-  .addClass('triangle--active');
+  .addClass('triangle--active')
+  .each(( i, el ) => {
+    window.paroller(el);
+  });
+//   .paroller({
+//     direction:  'vertical',
+//     type:       'foreground',
+//     transition: null
+//   })
+//   .addClass('triangle--active');
 
-new SmoothScroll('a[href*="#"]', { header: '.menu__wrapper', });
+new SmoothScroll('a[href*="#"]', { header: '.menu__wrapper' });
+
+window.showThank = () => openPopup({ items: { src: '#thank' } });

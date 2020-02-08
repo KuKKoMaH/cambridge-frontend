@@ -1,5 +1,5 @@
-import { tns } from "tiny-slider/src/tiny-slider";
-import Breakpoints from 'breakpoints-js';
+import { tns }      from "tiny-slider/src/tiny-slider";
+import Breakpoints  from 'breakpoints-js';
 import ScrollReveal from 'scrollreveal';
 
 $('.testimonials__tabs-header').on('click', function () {
@@ -17,38 +17,45 @@ $('.testimonials__tabs-header').on('click', function () {
     .addClass('testimonials__tab--active');
 });
 
-$('.testimonials__video').magnificPopup({ type: 'iframe', });
+$('.testimonials__video').magnificPopup({ type: 'iframe' });
 
 let sliderVideos;
 let sliderSocials;
 
 const initVideosSliders = () => {
   const $node = $('.testimonials__videos');
-  sliderVideos = tns({
-    container:    $node.find('.testimonials__items')[0],
-    mode:         'carousel',
-    mouseDrag:    true,
-    controls:     false,
-    // speed:        150,
-    items:        1,
-    // gutter:       14,
-    navContainer: $node.find('.testimonials__nav')[0],
-  });
+  const $container = $node.find('.testimonials__items')[0];
+  if ($container) {
+    sliderVideos = tns({
+      container:    $container,
+      mode:         'carousel',
+      mouseDrag:    true,
+      controls:     false,
+      // speed:        150,
+      items:        1,
+      // gutter:       14,
+      navContainer: $node.find('.testimonials__nav')[0],
+    });
+  }
 };
 
-const initSocialsSliders = (isBig) => {
+const initSocialsSliders = ( isBig ) => {
   const $node = $('.testimonials__socials');
-  sliderVideos = tns({
-    container:    $node.find('.testimonials__items')[0],
-    mode:         'carousel',
-    mouseDrag:    true,
-    items:        isBig ? 2 : 1,
-    gutter:       isBig ? 40 : 0,
-    prevButton:   $node.find('.testimonials__prev')[0],
-    nextButton:   $node.find('.testimonials__next')[0],
-    nav:          isBig ? false : true,
-    navContainer: isBig ? null : $node.find('.testimonials__nav')[0],
-  });
+  const $container = $node.find('.testimonials__items')[0];
+  if ($container) {
+    sliderVideos = tns({
+      container:    $container,
+      mode:         'carousel',
+      mouseDrag:    true,
+      items:        isBig ? 2 : 1,
+      gutter:       isBig ? 40 : 0,
+      prevButton:   $node.find('.testimonials__prev')[0],
+      nextButton:   $node.find('.testimonials__next')[0],
+      nav:          isBig ? false : true,
+      navContainer: isBig ? null : $node.find('.testimonials__nav')[0],
+      autoHeight:   isBig ? false : true,
+    });
+  }
 };
 
 const destroySlider = () => {

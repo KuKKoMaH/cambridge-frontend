@@ -2,7 +2,8 @@
   .excursionForm__inner
     .excursionForm__title Заполните форму
     .excursionForm__text #[span Заполните форму,] мы свяжемся#[br] с вами в течение рабочего дня
-    .excursionForm__form
-      input.excursionForm__input(placeholder='Как к вам обращаться:')
-      input.excursionForm__input(placeholder='Ваш телефон или e-mail:')
-      input.excursionForm__submit(type='submit' value='ЗАПИСАТЬСЯ НА ЭКСКУРСИЮ')
+    .excursionForm__right
+      .excursionForm__form
+        span: input.excursionForm__input(placeholder='Как к вам обращаться:')
+        span: input.excursionForm__input(placeholder='Ваш телефон или e-mail:')
+        span: input.excursionForm__submit(type='submit' value='ЗАПИСАТЬСЯ НА ЭКСКУРСИЮ')
