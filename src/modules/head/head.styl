@@ -15,18 +15,20 @@
 
   &__logo
     position: absolute
-    background: url(logo.png) 50% 50% no-repeat
-    background-size: cover
-    width: 119px
-    height: 119px
-    top: 65px
+    //background: url(logo.png) 50% 50% no-repeat
+    //background-size: cover
+    //width: 119px
+    //height: 119px
+    top: 125px
     right: 50%
-    margin-right: 760px
+    transform translateY(-50%)
+    margin-right: 720px
     @media (max-width: $breakpoint-sm - 1)
       right: auto
       top: 20px
-      width: 102px
-      height: 102px
+      transform none
+      //width: 102px
+      //height: 102px
       left: 12px
 
   &__note
