@@ -4,6 +4,22 @@
     .excursionForm__text #[span Заполните форму,] мы свяжемся#[br] с вами в течение рабочего дня
     .excursionForm__right
       .excursionForm__form
-        span: input.excursionForm__input(placeholder='Как к вам обращаться:')
-        span: input.excursionForm__input(placeholder='Ваш телефон или e-mail:')
-        span: input.excursionForm__submit(type='submit' value='ЗАПИСАТЬСЯ НА ЭКСКУРСИЮ')
+        .excursionForm__row
+          span
+            select.excursionForm__input(placeholder='Выбор учебного заведения:')
+              option Детский сад Кембридж Джуниор на Красносельской
+              option Детский сад Кембридж Джуниор на Юго-Западной
+              option Лингвистическая школа на Красносельской
+              option Британский лицей
+
+          span
+            select.excursionForm__input(placeholder='Выбор учебного заведения:')
+              option Детский сад Кембридж Джуниор на Красносельской
+              option Детский сад Кембридж Джуниор на Юго-Западной
+              option Лингвистическая школа на Красносельской
+              option Британский лицей
+
+        .excursionForm__row
+          span: input.excursionForm__input(placeholder='Как к вам обращаться:')
+          span: input.excursionForm__input(placeholder='Ваш телефон или e-mail:')
+          span: input.excursionForm__submit(type='submit' value='ЗАПИСАТЬСЯ НА ЭКСКУРСИЮ')

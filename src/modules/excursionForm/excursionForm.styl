@@ -53,6 +53,8 @@
 
   &__form
     visibility: hidden
+
+  &__row
     display: flex
     align-items: center
     @media (max-width: $breakpoint-md)
@@ -70,6 +72,9 @@
         @media (max-width: $breakpoint-md)
           margin-bottom: 0
           margin-top: 12px
+
+  &__row + &__row
+    margin-top: 20px
 
   &__input
     border: 1px solid #E2AF5F
