@@ -8,8 +8,10 @@ const scroll = new SmoothScroll();
 let slider;
 
 function closeActiveProgram(cb) {
+  console.log("CLOSE");
   const $activeEl = $('.programs__program--active');
   if (!$activeEl.length) {
+    console.log("ASD");
     cb();
     return;
   }
@@ -32,6 +34,7 @@ function onClickProgram() {
     if (!program) return;
     const $program = $(`.programs__program[data-program="${program}"]`);
     if (!$program.length) return;
+    console.log($program, $program[0].scrollHeight);
     $program.addClass('programs__program--active');
     $program.css('maxHeight', $program[0].scrollHeight);
     scroll.animateScroll($program[0], null, {offset: 100});
@@ -56,7 +59,7 @@ const initSliders = () => {
 
 const destroySlider = () => {
   if (slider) slider.destroy();
-  $('.programs__link').on('click', onClickProgram);
+  $('.programs__link').off('click', onClickProgram);
   slider = null;
 };
 
