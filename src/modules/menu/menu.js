@@ -2,7 +2,7 @@ $('.menu__button').on('click', () => {
   $('.menu').toggleClass('menu--active');
 });
 
-$('.menu__items a').on('click', () => {
+$('.menu__content a, .menu__content button').on('click', () => {
   $('.menu').removeClass('menu--active');
 });
 
