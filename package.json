@@ -40,8 +40,8 @@
     "postcss-sprites": "^4.2.1",
     "require-dir": "^1.2.0",
     "run-sequence": "^2.2.1",
-    "webpack": "^4.29.6",
-    "webpack-stream": "^5.2.1"
+    "webpack": "^5.94.0",
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "breakpoints-js": "^1.0.6",
